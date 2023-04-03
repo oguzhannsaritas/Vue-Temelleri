@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Vue JS || </title>
+</head>
+
+<body>
+    <div id="app">
+
+
+        <input type="text" v-model="sayi">
+        <!-- 2 yönlü veri alış verişi yapılır
+        yani v-model modülünü çalıştırdımızda yazılan sayı p değeri olarak gözükür. yani input a yazılan
+    veriler (değerler) p nin değeri olur . button sayeasindede her arttıtıldıgında 2 taraftada yani hem input hemde p nin içinde değerleri direkt olaraka yazılır-->
+        <p>{{sayi}}</p>
+        <button @click="arttır()">Arttır</button>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                sayi: 1402
+            },
+            methods: {
+                arttır() {
+                    this.sayi++
+                }
+            }
+
+        });
+    </script>
+
+
+</body>
+
+</html>
